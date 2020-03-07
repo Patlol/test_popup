@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Carte.gd" type="Script" id=1]
+[ext_resource path="res://images/tour.png" type="Texture" id=2]
+[ext_resource path="res://images/tourHover.png" type="Texture" id=3]
+[ext_resource path="res://images/tourPressed.png" type="Texture" id=4]
+
+[node name="Carte" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ButtonTour" type="TextureButton" parent="."]
+margin_left = 602.399
+margin_top = 137.604
+margin_right = 746.399
+margin_bottom = 215.604
+size_flags_horizontal = 7
+size_flags_vertical = 7
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 641.488
+margin_top = 488.174
+margin_right = 742.488
+margin_bottom = 563.174
+text = "Another button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 621.315
+margin_top = 594.658
+margin_right = 767.315
+margin_bottom = 608.658
+size_flags_horizontal = 5
+size_flags_vertical = 1
+text = "the other button works"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupFinTour" type="PopupPanel" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PopupFinTour"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 4.0
+margin_bottom = 4.0
+bbcode_enabled = true
+[connection signal="pressed" from="ButtonTour" to="." method="_on_ButtonTour_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
