@@ -5,9 +5,9 @@ func _ready() -> void:
 	$Label.hide()
 
 
-"""
-Signal envoyé par ButtonTour
-"""
+
+# Signal envoyé par ButtonTour
+
 func _on_ButtonTour_pressed() -> void:
 	$PopupFinTour.popup_centered(Vector2(600, 60))
 	$PopupFinTour.set_exclusive(true)
